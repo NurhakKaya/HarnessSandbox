@@ -5,6 +5,8 @@
 	Layout = null;
 }
 
-<div>Test</div>
+@await Component.InvokeAsync("Hero", new { content = Model })
+
+<div>Body - todo</div>
 
 @await Component.InvokeAsync("Footer")

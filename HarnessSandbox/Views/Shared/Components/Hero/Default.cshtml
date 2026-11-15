@@ -1,0 +1,29 @@
+@model IPublishedContent
+
+@if (Model is IHero hero && !string.IsNullOrWhiteSpace(hero.HeroHeading))
+{
+    var imageUrl = hero.HeroImage?.GetCropUrl(width: 1600, height: 600);
+
+    <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero__content">
+            <h1 id="hero-heading" class="hero__heading">@hero.HeroHeading</h1>
+
+            @if (!string.IsNullOrWhiteSpace(hero.HeroIntro))
+            {
+                <p class="hero__intro">@hero.HeroIntro</p>
+            }
+        </div>
+
+        @if (!string.IsNullOrEmpty(imageUrl))
+        {
+            @* An empty alt marks the image as decorative, which is correct when the editor leaves it blank. *@
+            <img class="hero__image"
+                 src="@imageUrl"
+                 alt="@(hero.HeroImageAlt ?? string.Empty)"
+                 width="1600"
+                 height="600"
+                 fetchpriority="high"
+                 decoding="async" />
+        }
+    </section>
+}
