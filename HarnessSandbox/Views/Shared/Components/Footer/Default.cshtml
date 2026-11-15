@@ -1,0 +1,8 @@
+@model HarnessSandbox.ViewComponents.FooterViewModel
+
+@if (!string.IsNullOrEmpty(Model.SiteName))
+{
+    <footer class="site-footer">
+        <p class="site-footer__name">@Model.SiteName</p>
+    </footer>
+}
