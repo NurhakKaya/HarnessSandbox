@@ -1,4 +1,4 @@
-**Experimental: AI harness sandbox project to learn how to create an AI harness**
+# Experimental: AI harness sandbox project to learn how to create an AI harness
 
 **Question:**
 Can we create an AI harness together to test it locally on my Windows machine? I want to do this with you to learn how to build an AI harness so a team of developers can follow a similar path to build features for an Umbraco website (and later potentially a Kentico or Drupal website).
